@@ -32,14 +32,14 @@ body>*{position:relative;z-index:1}
 .mo{text-align:center;padding:16px 32px 4px;font-size:12px;color:var(--txm);font-weight:600;font-style:italic}
 .hl{padding:0 14px;display:flex;flex-direction:column;gap:6px}
 .hi{display:flex;align-items:center;background:var(--sf);border-radius:var(--r);position:relative;overflow:hidden;transition:transform .15s,opacity .3s,max-height .4s}
-.hi:active:not(.sw){transform:scale(.985)}.hi.rm{transform:translateX(-120%);opacity:0;max-height:0!important;margin-bottom:-6px;transition:all .4s cubic-bezier(.4,0,.2,1)}
+.hi:active:not(.sw):not(.drg){transform:scale(.985)}.hi.rm{transform:translateX(-120%);opacity:0;max-height:0!important;margin-bottom:-6px;transition:all .4s cubic-bezier(.4,0,.2,1)}
 .ha{width:4px;align-self:stretch;flex-shrink:0;border-radius:4px 0 0 4px;transition:opacity .3s}.hi.dn .ha{opacity:.4}
 .hm{flex:1;display:flex;align-items:center;gap:12px;padding:14px 4px 14px 12px;cursor:pointer;min-width:0;transition:transform .25s}
 .he{width:40px;height:40px;border-radius:var(--rx);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;transition:transform .3s cubic-bezier(.175,.885,.32,1.275)}
 .hi.dn .he{transform:scale(.9)}.hbd{flex:1;min-width:0}
 .ht{font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:.3s}
 .hi.dn .ht{opacity:.45;text-decoration:line-through;text-decoration-color:var(--gr);text-decoration-thickness:2px}
-.hs{display:flex;align-items:center;gap:8px;margin-top:2px}
+.hs{display:flex;align-items:center;gap:6px;margin-top:2px;flex-wrap:wrap}
 .hsb{font-size:11px;font-weight:700;color:var(--ac);display:flex;align-items:center;gap:3px}
 .hft{font-size:10px;font-weight:700;color:var(--txm);background:var(--sf2);padding:1px 6px;border-radius:4px}
 .mc{display:flex;gap:2px;align-items:center}.mcl{width:7px;height:7px;border-radius:2px}
@@ -49,7 +49,7 @@ body>*{position:relative;z-index:1}
 .cb svg{width:13px;height:13px;stroke:var(--bg);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none;opacity:0;transform:scale(.3) rotate(-20deg);transition:all .35s cubic-bezier(.175,.885,.32,1.275)}
 .hi.dn .cb{background:var(--gr);border-color:var(--gr);box-shadow:0 0 12px rgba(52,211,153,.3)}.hi.dn .cb svg{opacity:1;transform:scale(1) rotate(0)}
 .hi.sk .ht{opacity:.35;font-style:italic}.hi.sk .cb{border-color:var(--am);border-style:dashed}
-.hi.off{opacity:.5}
+.hi.off{opacity:.45}.hi.off .ha{opacity:.3}
 .hdz{position:absolute;right:0;top:0;bottom:0;width:80px;background:linear-gradient(90deg,transparent,rgba(248,113,113,.15));display:flex;align-items:center;justify-content:center;transform:translateX(80px);transition:transform .25s;cursor:pointer}
 .hi.sw .hdz{transform:translateX(0)}.hi.sw .hm,.hi.sw .hac{transform:translateX(-80px)}
 .es{text-align:center;padding:56px 32px 32px}
@@ -75,20 +75,22 @@ body>*{position:relative;z-index:1}
 .cd{width:32px;height:32px;border-radius:50%;border:3px solid transparent;cursor:pointer;transition:.2s;position:relative}
 .cd.se{border-color:var(--tx);transform:scale(1.18)}.cd.se::after{content:'✓';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:rgba(0,0,0,.6)}
 .fr{display:flex;gap:6px;flex-wrap:wrap}
-.fc{flex:1 1 auto;min-width:70px;padding:10px 6px;text-align:center;border-radius:var(--rx);background:var(--sf2);border:2px solid transparent;font-size:12px;font-weight:700;color:var(--tx2);cursor:pointer;transition:.15s}
+.fc{flex:1 1 auto;min-width:68px;padding:10px 6px;text-align:center;border-radius:var(--rx);background:var(--sf2);border:2px solid transparent;font-size:12px;font-weight:700;color:var(--tx2);cursor:pointer;transition:.15s}
 .fc.se{border-color:var(--ac);color:var(--ac);background:var(--acs)}
 .sb{width:100%;background:var(--ac);color:#fff;border:none;border-radius:var(--rs);padding:16px;font-family:'Nunito',sans-serif;font-size:15px;font-weight:800;cursor:pointer;margin-top:6px;transition:.15s;letter-spacing:.3px}.sb:active{transform:scale(.97);opacity:.9}
 .db{width:100%;background:rgba(248,113,113,.08);color:var(--rd);border:1.5px solid rgba(248,113,113,.2);border-radius:var(--rs);padding:14px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-top:10px;transition:.15s}.db:active{transform:scale(.97)}
+.ab{width:100%;background:rgba(251,191,36,.08);color:var(--am);border:1.5px solid rgba(251,191,36,.2);border-radius:var(--rs);padding:14px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-top:10px;transition:.15s}.ab:active{transform:scale(.97)}
 .ds{display:flex;gap:8px;margin-bottom:20px}
 .dt{flex:1;background:var(--sf2);border-radius:var(--rs);padding:12px 8px;text-align:center}
 .dv{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;line-height:1}
 .dl{font-size:9px;font-weight:700;color:var(--txm);text-transform:uppercase;letter-spacing:.8px;margin-top:4px}
 .cg{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-bottom:8px}
 .ch{font-size:9px;font-weight:700;color:var(--txm);text-align:center;text-transform:uppercase;padding:2px 0}
-.cc{aspect-ratio:1;border-radius:4px;background:var(--sf2);position:relative;transition:.15s;cursor:pointer}
-.cc:active{transform:scale(.9)}.cc.fu{opacity:.3;pointer-events:none}
+.cc{aspect-ratio:1;border-radius:4px;background:var(--sf2);position:relative;transition:all .15s;cursor:pointer}
+.cc:active:not(.fu):not(.bf){transform:scale(.85)}.cc.fu{opacity:.3;pointer-events:none}.cc.bf{opacity:.15;pointer-events:none}
 .cc .cn{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--txm)}
-.cc.cd2 .cn{color:rgba(0,0,0,.5)}.cc.tc{outline:2px solid var(--ac);outline-offset:-1px}.cc.sc{background:rgba(251,191,36,.12)!important}
+.cc.cd2 .cn{color:rgba(0,0,0,.5)}.cc.tc{outline:2px solid var(--ac);outline-offset:-1px}.cc.sc{background:rgba(251,191,36,.25)!important}
+.cc.sc .cn{color:var(--am)}
 .cv{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .cv button{background:var(--sf2);border:1px solid var(--sf3);color:var(--tx2);border-radius:var(--rx);padding:6px 14px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:700;cursor:pointer}.cv button:active{background:var(--sf3)}
 .si{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--sf2)}.si:last-child{border-bottom:none}
@@ -104,8 +106,12 @@ body>*{position:relative;z-index:1}
 @keyframes cfb{0%{opacity:1;transform:translateY(40vh) scale(1) rotate(0)}50%{opacity:1}100%{opacity:0;transform:translateY(-20vh) scale(.6) rotate(var(--rot,540deg))}}
 .ae{opacity:0;transform:translateY(14px);animation:aeu .45s cubic-bezier(.32,.72,0,1) forwards}
 @keyframes aeu{to{opacity:1;transform:translateY(0)}}
-.tgt{font-size:11px;color:var(--tx2);font-weight:600;margin-top:1px}
-.arch-badge{font-size:9px;font-weight:800;color:var(--txm);background:var(--sf3);padding:2px 6px;border-radius:4px;margin-left:6px}
+.tgt{font-size:10px;color:var(--tx2);font-weight:600}
+.abg{font-size:9px;font-weight:800;color:var(--txm);background:var(--sf3);padding:2px 6px;border-radius:4px;margin-left:4px}
+.sep{padding:0 22px;margin:4px 0}
+.sep-line{border:none;border-top:1px solid var(--sf2)}
+.cal-hint{font-size:10px;color:var(--txm);text-align:center;margin-top:6px;font-weight:600}
+.drag-ghost{opacity:.7;transform:scale(1.02);box-shadow:0 8px 32px rgba(0,0,0,.4);z-index:50}
 ::-webkit-scrollbar{width:0}
 </style>
 </head>
@@ -116,21 +122,21 @@ body>*{position:relative;z-index:1}
 <div class="cl" id="confetti"></div>
 <script>
 // ===== STORAGE =====
-const SK='streak_v5';
+const SK='streak_v6';
 const load=()=>{try{return JSON.parse(localStorage.getItem(SK))||[]}catch{return[]}};
 const save=h=>localStorage.setItem(SK,JSON.stringify(h));
-const td=()=>new Date().toISOString().slice(0,10);
-const dk=d=>d.toISOString().slice(0,10);
+const td=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+const dk=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 
 // ===== STATE =====
 let H=load(),sheet=null,editI=null,detI=null,detM=new Date();
 let sE='\ud83c\udfc3',sC='#F46B3F',sF='Daily',sN='',sT='';
-let undoS=null,undoT=null;
+let undoS=null,undoT=null,lpTimer=null;
 
 const EM=['\ud83c\udfc3','\ud83d\udcaa','\ud83d\udcd6','\ud83e\uddd8','\ud83d\udca7','\ud83c\udfa8','\u270d\ufe0f','\ud83c\udfb5','\ud83d\udca4','\ud83e\udd57','\ud83d\udc8a','\ud83e\uddf9','\ud83d\udcf1','\ud83d\udc36','\ud83c\udf05','\u2615','\ud83e\udde0','\ud83c\udfaf','\ud83e\udea5','\ud83d\udcb0','\ud83d\udcdd','\ud83e\udec1','\ud83c\udf4e','\ud83d\udeb4'];
 const CO=['#F46B3F','#34D399','#60A5FA','#A78BFA','#F472B6','#FBBF24','#F87171','#2DD4BF'];
-const FR=['Daily','Weekdays','Weekends','3x/week','Custom'];
+const FR=['Daily','Weekdays','Weekends','3x/week'];
 
 // ===== FREQUENCY =====
 function isDue(h,ds){
@@ -138,35 +144,32 @@ function isDue(h,ds){
   switch(h.frequency){
     case'Weekdays':return w>=1&&w<=5;
     case'Weekends':return w===0||w===6;
-    case'3x/week': return true; // always shows, but we track weekly count
+    case'3x/week':return true;
     default:return true;
   }
 }
 
-// For 3x/week: count completions this week
+// Count completions in the ISO week containing ds
 function weeklyCount(h,ds){
-  const d=new Date(ds+'T12:00:00');
-  const dow=(d.getDay()+6)%7;
+  const d=new Date(ds+'T12:00:00'),dow=(d.getDay()+6)%7;
   const mon=new Date(d);mon.setDate(d.getDate()-dow);
-  let count=0;
-  for(let i=0;i<7;i++){
-    const dd=new Date(mon);dd.setDate(mon.getDate()+i);
-    if(h.completions?.[dk(dd)]==='done')count++;
-  }
-  return count;
+  let c=0;
+  for(let i=0;i<7;i++){const dd=new Date(mon);dd.setDate(mon.getDate()+i);if(h.completions?.[dk(dd)]==='done')c++}
+  return c;
 }
 
-function is3xDone(h,ds){return h.frequency==='3x/week'&&weeklyCount(h,ds)>=3}
+function is3xMet(h,ds){return h.frequency==='3x/week'&&weeklyCount(h,ds)>=3}
 
-function isEffectivelyDone(h,ds){
+function isEffDone(h,ds){
   const st=h.completions?.[ds];
   if(st==='done'||st==='skip')return true;
-  if(is3xDone(h,ds))return true;
+  if(is3xMet(h,ds)&&!st)return true; // weekly goal met even if this day unmarked
   return false;
 }
 
 // ===== STREAK =====
 function streak(h){
+  if(h.frequency==='3x/week')return streak3x(h);
   let s=0,d=new Date();const t=td();
   if(h.completions?.[t]!=='done')d.setDate(d.getDate()-1);
   for(let i=0;i<9999;i++){
@@ -178,10 +181,35 @@ function streak(h){
   return s;
 }
 
+// Week-based streak for 3x/week
+function streak3x(h){
+  let s=0;const now=new Date();
+  const dow=(now.getDay()+6)%7;
+  let mon=new Date(now);mon.setDate(now.getDate()-dow);
+  // Check current week: if goal met, count it
+  if(weeklyCount(h,dk(mon))>=3)s++;
+  else{mon.setDate(mon.getDate()-7)} // start from last week if current not met
+  // Walk back through previous weeks
+  for(let i=0;i<520;i++){
+    const wk=dk(mon);
+    if(weeklyCount(h,wk)>=3){s++;mon.setDate(mon.getDate()-7)}
+    else{
+      // Check if all days in this week are skip or before creation
+      const cr=h.createdAt||'2020-01-01';
+      if(wk<cr)break;
+      let allSkip=true;
+      for(let j=0;j<7;j++){const dd=new Date(mon.getTime());dd.setDate(mon.getDate()+j);const k=dk(dd);if(k>=cr&&h.completions?.[k]!=='skip'){allSkip=false;break}}
+      if(allSkip){mon.setDate(mon.getDate()-7)}else break;
+    }
+  }
+  return s;
+}
+
 function totalDone(h){return h.completions?Object.values(h.completions).filter(v=>v==='done').length:0}
 
 function bestStrk(h){
   if(!h.completions)return 0;
+  if(h.frequency==='3x/week')return bestStrk3x(h);
   const dates=Object.keys(h.completions).filter(k=>h.completions[k]==='done').sort();
   if(!dates.length)return 0;let mx=1,c=1;
   for(let i=1;i<dates.length;i++){
@@ -192,16 +220,32 @@ function bestStrk(h){
   }return mx;
 }
 
-// Accurate completion rate: done days / due days
+function bestStrk3x(h){
+  // Best consecutive weeks with 3+ completions
+  const cr=h.createdAt||'2020-01-01';
+  const start=new Date(cr+'T12:00:00'),now=new Date();
+  const sdow=(start.getDay()+6)%7;
+  let mon=new Date(start);mon.setDate(start.getDate()-sdow);
+  let mx=0,c=0;
+  while(mon<=now){
+    if(weeklyCount(h,dk(mon))>=3)c++;
+    else c=0;
+    if(c>mx)mx=c;
+    mon.setDate(mon.getDate()+7);
+  }
+  return mx;
+}
+
+// Completion rate: done / due days
 function compRate(h){
   const cr=h.createdAt||td();
   const start=new Date(cr+'T12:00:00'),end=new Date();
-  let dueDays=0,doneDays=0;
+  let due=0,done=0;
   for(let d=new Date(start);d<=end;d.setDate(d.getDate()+1)){
     const k=dk(d);
-    if(isDue(h,k)){dueDays++;if(h.completions?.[k]==='done')doneDays++}
+    if(isDue(h,k)){due++;if(h.completions?.[k]==='done')done++}
   }
-  return dueDays?Math.round(doneDays/dueDays*100):0;
+  return due?Math.round(done/due*100):0;
 }
 
 function last7(h){const r=[];for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);const k=dk(d);r.push(h.completions?.[k]==='done'?1:h.completions?.[k]==='skip'?2:0)}return r}
@@ -209,11 +253,12 @@ function last7(h){const r=[];for(let i=6;i>=0;i--){const d=new Date();d.setDate(
 function getWeek(){const t=new Date(),w=(t.getDay()+6)%7,m=new Date(t);m.setDate(t.getDate()-w);return Array.from({length:7},(_,i)=>{const d=new Date(m);d.setDate(m.getDate()+i);return d})}
 
 function dayProg(ds){
-  if(!H.length)return-1; // -1 = no habits
-  const t=td();if(ds>t)return-1; // future
-  const due=H.filter(h=>!h.archived&&isDue(h,ds));
+  const t=td();if(ds>t)return-1;
+  const active=H.filter(h=>!h.archived);
+  if(!active.length)return-1;
+  const due=active.filter(h=>isDue(h,ds));
   if(!due.length)return-1;
-  return due.filter(h=>isEffectivelyDone(h,ds)).length/due.length;
+  return due.filter(h=>isEffDone(h,ds)).length/due.length;
 }
 
 function greet(){const h=new Date().getHours();return h<5?'Late night':h<12?'Good morning':h<17?'Good afternoon':h<21?'Good evening':'Night owl'}
@@ -232,89 +277,84 @@ function celeb(){const c=document.getElementById('confetti'),cs=['#F46B3F','#34D
 // ===== CALENDAR =====
 function calHTML(h,md){
   const y=md.getFullYear(),m=md.getMonth(),f=new Date(y,m,1),l=new Date(y,m+1,0),sw=(f.getDay()+6)%7,t=td();
-  let o=`<div class="cv"><button onclick="calP()">\u25C0</button><span style="font-weight:700">${f.toLocaleDateString('en-US',{month:'long',year:'numeric'})}</span><button onclick="calN()">\u25B6</button></div><div class="cg">`;
+  const cr=h.createdAt||'2020-01-01';
+  const isNow=md.getMonth()===new Date().getMonth()&&md.getFullYear()===new Date().getFullYear();
+  let o=`<div class="cv"><button onclick="calP()">\u25C0</button><span style="font-weight:700">${f.toLocaleDateString('en-US',{month:'long',year:'numeric'})}</span><div style="display:flex;gap:6px">${!isNow?`<button onclick="calToday()">Today</button>`:''}` +
+    `<button onclick="calN()">\u25B6</button></div></div><div class="cg">`;
   ['M','T','W','T','F','S','S'].forEach(d=>o+=`<div class="ch">${d}</div>`);
   for(let i=0;i<sw;i++)o+=`<div style="aspect-ratio:1"></div>`;
   for(let d=1;d<=l.getDate();d++){
-    const ds=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`,iF=ds>t,st=h.completions?.[ds],iD=st==='done',iS=st==='skip',iT=ds===t;
-    o+=`<div class="cc${iF?' fu':''}${iD?' cd2':''}${iT?' tc':''}${iS?' sc':''}" style="background:${iD?h.color:'var(--sf2)'}" onclick="${iF?'':`calTap('${ds}')`}"><span class="cn">${d}</span></div>`;
+    const ds=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const iF=ds>t,iBf=ds<cr,st=h.completions?.[ds],iD=st==='done',iS=st==='skip',iT=ds===t;
+    o+=`<div class="cc${iF?' fu':''}${iBf?' bf':''}${iD?' cd2':''}${iT?' tc':''}${iS?' sc':''}" style="background:${iD?h.color:'var(--sf2)'}" ${!iF&&!iBf?`onclick="calTap('${ds}')"`:''}><span class="cn">${d}</span></div>`;
   }
-  return o+'</div>';
+  return o+'</div><div class="cal-hint">Tap a past day to cycle: done \u2192 skip \u2192 clear</div>';
 }
 
 function calP(){detM=new Date(detM.getFullYear(),detM.getMonth()-1,1);render()}
 function calN(){const now=new Date(),n=new Date(detM.getFullYear(),detM.getMonth()+1,1);if(n.getFullYear()<now.getFullYear()||(n.getFullYear()===now.getFullYear()&&n.getMonth()<=now.getMonth()))detM=n;render()}
+function calToday(){detM=new Date();render()}
 
-// Tap calendar cell to toggle past day
+// Tap calendar cell: cycle done → skip → clear
 function calTap(ds){
   if(detI===null||!H[detI])return;
   const h=H[detI];if(!h.completions)h.completions={};
   const cur=h.completions[ds];
-  if(cur==='done')delete h.completions[ds];
-  else h.completions[ds]='done';
+  if(!cur)h.completions[ds]='done';
+  else if(cur==='done')h.completions[ds]='skip';
+  else delete h.completions[ds];
   save(H);render();
+  if(window.Telegram?.WebApp?.HapticFeedback)window.Telegram.WebApp.HapticFeedback.impactOccurred('light');
+}
+
+// ===== SORT: due first, then off-day =====
+function sortedActive(){
+  const t=td(),active=H.filter(h=>!h.archived);
+  const due=[],off=[];
+  active.forEach(h=>{if(isDue(h,t))due.push(h);else off.push(h)});
+  return{due,off};
 }
 
 // ===== MAIN RENDER =====
 function render(){
   const a=document.getElementById('app'),t=td(),wk=getWeek(),dn=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
-  const active=H.filter(h=>!h.archived);
-  const due=active.filter(h=>isDue(h,t));
-  const comp=due.filter(h=>isEffectivelyDone(h,t)).length;
-  const tot=due.length,pct=tot?Math.round(comp/tot*100):0,ci=2*Math.PI*22,of=ci-(pct/100)*ci;
+  const {due,off}=sortedActive();
+  const allActive=[...due,...off];
+  const comp=due.filter(h=>isEffDone(h,t)).length;
+  const tot=due.length,pct=tot?Math.round(comp/tot*100):0,ci=2*Math.PI*22,of2=ci-(pct/100)*ci;
   const motto=MT[new Date().getDate()%MT.length];
 
-  let o=`<div class="hd ae"><div class="hd-l"><div class="gr">${greet()} \u2726</div><h1>Your Habits</h1></div><div class="hd-r"><div class="hb" onclick="openSet()">\u2699\ufe0f</div>${active.length?`<div class="hr"><svg viewBox="0 0 48 48"><circle class="rt" cx="24" cy="24" r="22"/><circle class="rf" cx="24" cy="24" r="22" stroke-dasharray="${ci}" stroke-dashoffset="${of}" style="stroke:${pct>=100?'var(--gr)':pct>0?'var(--ac)':'var(--sf3)'}"/></svg><div class="rl" style="color:${pct>=100?'var(--gr)':pct>0?'var(--ac)':'var(--txm)'}">${pct}%</div></div>`:''}</div></div>`;
+  let o=`<div class="hd ae"><div class="hd-l"><div class="gr">${greet()} \u2726</div><h1>Your Habits</h1></div><div class="hd-r"><div class="hb" onclick="openSet()">\u2699\ufe0f</div>${allActive.length?`<div class="hr"><svg viewBox="0 0 48 48"><circle class="rt" cx="24" cy="24" r="22"/><circle class="rf" cx="24" cy="24" r="22" stroke-dasharray="${ci}" stroke-dashoffset="${of2}" style="stroke:${pct>=100?'var(--gr)':pct>0?'var(--ac)':'var(--sf3)'}"/></svg><div class="rl" style="color:${pct>=100?'var(--gr)':pct>0?'var(--ac)':'var(--txm)'}">${pct}%</div></div>`:''}</div></div>`;
 
   o+=`<div class="ws ae" style="animation-delay:.04s">${wk.map((d,i)=>{const ds=dk(d),iT=ds===t,p=dayProg(ds);const pc=p>=1?'var(--gr)':p>0?'var(--ac)':'var(--sf3)';const w=p<0?0:p*100;return`<div class="wc${iT?' td':''}"><span class="wd">${dn[i]}</span><span class="wn">${d.getDate()}</span><div class="wp"><div class="wf" style="width:${w}%;background:${pc}"></div></div></div>`}).join('')}</div>`;
 
   o+=`<div class="mo ae" style="animation-delay:.08s">\u201C${motto}\u201D</div>`;
   o+=`<div class="sh ae" style="animation-delay:.1s"><h2>Today\u2019s Tasks</h2>${tot?`<span class="pt">${comp} of ${tot}</span>`:''}</div>`;
 
-  if(!active.length){
+  if(!allActive.length&&!H.filter(h=>h.archived).length){
     o+=`<div class="es ae" style="animation-delay:.14s"><div class="eg">\ud83c\udf31</div><h3>Start your streak</h3><p>Build habits that stick. Add your first one and watch the streaks grow.</p></div>`;
   } else {
-    o+=`<div class="hl">`;
-    active.forEach((h,ai)=>{
-      const i=H.indexOf(h); // real index
-      const du=isDue(h,t),st=h.completions?.[t],dn2=st==='done',sk=st==='skip';
-      const is3d=is3xDone(h,t)&&!dn2;
-      const s=streak(h),l7=last7(h);
-      const offDay=!du;
-      const wc=h.frequency==='3x/week'?weeklyCount(h,t):0;
-
-      o+=`<div class="hi${dn2?' dn':''}${sk?' sk':''}${offDay?' off':''} ae" style="animation-delay:${.1+ai*.035}s" id="h-${i}">
-        <div class="ha" style="background:${h.color}"></div>
-        <div class="hm" onclick="tog(${i})">
-          <div class="he" style="background:${h.color}15">${h.emoji}</div>
-          <div class="hbd">
-            <div class="ht">${esc(h.name)}</div>
-            <div class="hs">
-              ${s>0?`<span class="hsb">\ud83d\udd25 ${s}d</span>`:`<span class="hsb" style="color:var(--txm)">${offDay?'Off day':'Due today'}</span>`}
-              ${h.frequency!=='Daily'?`<span class="hft">${h.frequency}${h.frequency==='3x/week'?' ('+wc+'/3)':''}</span>`:''}
-              ${h.target?`<span class="tgt">${esc(h.target)}</span>`:''}
-              <div class="mc">${l7.map(v=>`<div class="mcl" style="background:${v===1?h.color:v===2?'var(--am)':'var(--sf3)'};opacity:${v?.8:.2}"></div>`).join('')}</div>
-            </div>
-          </div>
-        </div>
-        <div class="hac">
-          ${!dn2&&du&&!is3d?`<button class="ib" onclick="event.stopPropagation();skip(${i})" title="Skip">\u23ed</button>`:''}
-          <button class="ib" onclick="event.stopPropagation();openDet(${i})" title="Details">\ud83d\udcca</button>
-          <div class="cb" onclick="event.stopPropagation();tog(${i})"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-        </div>
-        <div class="hdz" onclick="rem(${i})"><span style="font-size:22px">\ud83d\uddd1</span></div>
-      </div>`;
-    });
-    o+=`</div>`;
-
+    // Due habits
+    if(due.length||!off.length){
+      o+=`<div class="hl">`;
+      due.forEach((h,ai)=>{o+=habitCard(h,ai,true)});
+      o+=`</div>`;
+    }
+    // Off-day section
+    if(off.length){
+      o+=`<div class="sh ae" style="animation-delay:.18s"><h2>Off Today</h2><span class="pt">${off.length}</span></div>`;
+      o+=`<div class="hl">`;
+      off.forEach((h,ai)=>{o+=habitCard(h,ai+due.length,false)});
+      o+=`</div>`;
+    }
     // Archived section
     const archived=H.filter(h=>h.archived);
     if(archived.length){
-      o+=`<div class="sh ae" style="animation-delay:.2s"><h2>Archived</h2><span class="pt">${archived.length}</span></div><div class="hl">`;
+      o+=`<div class="sh ae" style="animation-delay:.22s"><h2>Archived</h2><span class="pt">${archived.length}</span></div><div class="hl">`;
       archived.forEach(h=>{const i=H.indexOf(h);
-        o+=`<div class="hi off ae" id="h-${i}" style="animation-delay:.22s">
+        o+=`<div class="hi off ae" id="h-${i}" style="animation-delay:.24s">
           <div class="ha" style="background:${h.color}"></div>
-          <div class="hm" onclick="openDet(${i})"><div class="he" style="background:${h.color}15">${h.emoji}</div><div class="hbd"><div class="ht">${esc(h.name)}<span class="arch-badge">ARCHIVED</span></div><div class="hs"><span class="hsb" style="color:var(--txm)">${totalDone(h)} total completions</span></div></div></div>
+          <div class="hm" onclick="openDet(${i})"><div class="he" style="background:${h.color}15">${h.emoji}</div><div class="hbd"><div class="ht">${esc(h.name)}<span class="abg">ARCHIVED</span></div><div class="hs"><span class="hsb" style="color:var(--txm)">${totalDone(h)} total</span></div></div></div>
           <div class="hac"><button class="ib" onclick="event.stopPropagation();openDet(${i})">\ud83d\udcca</button></div>
           <div class="hdz" onclick="rem(${i})"><span style="font-size:22px">\ud83d\uddd1</span></div>
         </div>`;
@@ -326,6 +366,36 @@ function render(){
   o+=`<div class="fw"><button class="fb" onclick="openAdd()"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>New Habit</button></div>`;
   o+=renderSheet();
   a.innerHTML=o;
+}
+
+function habitCard(h,ai,isDueToday){
+  const i=H.indexOf(h),t=td();
+  const st=h.completions?.[t],dn2=st==='done',sk=st==='skip';
+  const s=streak(h),l7=last7(h);
+  const wc=h.frequency==='3x/week'?weeklyCount(h,t):0;
+  const met3x=is3xMet(h,t);
+
+  return`<div class="hi${dn2?' dn':''}${sk?' sk':''}${!isDueToday?' off':''} ae" style="animation-delay:${.1+ai*.035}s" id="h-${i}">
+    <div class="ha" style="background:${h.color}"></div>
+    <div class="hm" onclick="${isDueToday?`tog(${i})`:`openDet(${i})`}">
+      <div class="he" style="background:${h.color}15">${h.emoji}</div>
+      <div class="hbd">
+        <div class="ht">${esc(h.name)}</div>
+        <div class="hs">
+          ${s>0?`<span class="hsb">\ud83d\udd25 ${s}${h.frequency==='3x/week'?'w':'d'}</span>`:`<span class="hsb" style="color:var(--txm)">${isDueToday?'Due today':'Off day'}</span>`}
+          ${h.frequency!=='Daily'?`<span class="hft">${h.frequency}${h.frequency==='3x/week'?' ('+wc+'/3)':''}</span>`:''}
+          ${h.target?`<span class="tgt">${esc(h.target)}</span>`:''}
+          <div class="mc">${l7.map(v=>`<div class="mcl" style="background:${v===1?h.color:v===2?'var(--am)':'var(--sf3)'};opacity:${v?.8:.2}"></div>`).join('')}</div>
+        </div>
+      </div>
+    </div>
+    <div class="hac">
+      ${isDueToday&&!dn2&&!met3x?`<button class="ib" onclick="event.stopPropagation();skip(${i})" title="Skip">\u23ed</button>`:''}
+      <button class="ib" onclick="event.stopPropagation();openDet(${i})" title="Details">\ud83d\udcca</button>
+      ${isDueToday?`<div class="cb" onclick="event.stopPropagation();tog(${i})"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>`:''}
+    </div>
+    <div class="hdz" onclick="rem(${i})"><span style="font-size:22px">\ud83d\uddd1</span></div>
+  </div>`;
 }
 
 // ===== SHEETS =====
@@ -340,13 +410,13 @@ function renderSheet(){
 function formSheet(){
   const isE=sheet==='edit';
   return`<div class="so ac" id="sov" onclick="cls(event)"><div class="ss"><div class="shn"></div><h2>${isE?'Edit Habit':'New Habit'}</h2>
-  <div class="fd"><label class="fl">Habit name</label><input class="fi" id="inp" placeholder="e.g. Meditate, Read, Exercise" maxlength="40" autocomplete="off" value="${esc(sN)}"></div>
-  <div class="fd"><label class="fl">Daily target (optional)</label><input class="fi" id="inp-t" placeholder="e.g. 30 pages, 8 glasses, 10 min" maxlength="30" autocomplete="off" value="${esc(sT)}"></div>
+  <div class="fd"><label class="fl">Habit name</label><input class="fi" id="inp" placeholder="e.g. Meditate, Read, Exercise" maxlength="40" autocomplete="off" value="${esc(sN)}" onkeydown="if(event.key==='Enter')sub()"></div>
+  <div class="fd"><label class="fl">Daily target <span style="color:var(--txm);text-transform:none;letter-spacing:0">(optional)</span></label><input class="fi" id="inp-t" placeholder="e.g. 30 pages, 8 glasses, 10 min" maxlength="30" autocomplete="off" value="${esc(sT)}" onkeydown="if(event.key==='Enter')sub()"></div>
   <div class="fd"><label class="fl">Icon</label><div class="eg2">${EM.map(e=>`<div class="eb${e===sE?' se':''}" data-e="${e}" onclick="pE(this)">${e}</div>`).join('')}</div></div>
   <div class="fd"><label class="fl">Color</label><div class="cr">${CO.map(c=>`<div class="cd${c===sC?' se':''}" style="background:${c}" data-c="${c}" onclick="pC(this)"></div>`).join('')}</div></div>
-  <div class="fd"><label class="fl">Frequency</label><div class="fr">${FR.filter(f=>f!=='Custom').map(f=>`<div class="fc${f===sF?' se':''}" data-f="${f}" onclick="pF(this)">${f}</div>`).join('')}</div></div>
+  <div class="fd"><label class="fl">Frequency</label><div class="fr">${FR.map(f=>`<div class="fc${f===sF?' se':''}" data-f="${f}" onclick="pF(this)">${f}</div>`).join('')}</div></div>
   <button class="sb" onclick="sub()">${isE?'Save Changes':'Create Habit'}</button>
-  ${isE?`<button class="db" onclick="rem(${editI});clsD()">Delete Habit</button>`:''}
+  ${isE?`<button class="db" onclick="if(confirm('Delete this habit?')){rem(${editI});clsD()}">Delete Habit</button>`:''}
   </div></div>`;
 }
 
@@ -354,21 +424,21 @@ function detailSheet(){
   const h=H[detI];if(!h)return'';
   const s=streak(h),td2=totalDone(h),bs=bestStrk(h),rate=compRate(h);
   const cr=h.createdAt||td();
+  const sUnit=h.frequency==='3x/week'?'w':'d';
   return`<div class="so ac" id="sov" onclick="cls(event)"><div class="ss"><div class="shn"></div>
   <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
-    <div style="width:48px;height:48px;border-radius:14px;background:${h.color}15;display:flex;align-items:center;justify-content:center;font-size:24px">${h.emoji}</div>
-    <div style="flex:1;min-width:0"><h2 style="margin:0;font-size:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(h.name)}</h2><div style="font-size:12px;color:var(--txm);font-weight:600;margin-top:2px">${h.frequency}${h.target?' \u00b7 '+esc(h.target):''} \u00b7 Since ${new Date(cr).toLocaleDateString('en-US',{month:'short',day:'numeric'})}</div></div>
+    <div style="width:48px;height:48px;border-radius:14px;background:${h.color}15;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0">${h.emoji}</div>
+    <div style="flex:1;min-width:0"><h2 style="margin:0;font-size:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(h.name)}</h2><div style="font-size:12px;color:var(--txm);font-weight:600;margin-top:2px">${h.frequency}${h.target?' \u00b7 '+esc(h.target):''} \u00b7 Since ${new Date(cr+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}</div></div>
     <button class="ib" style="font-size:18px;flex-shrink:0" onclick="openEdit(${detI})">\u270f\ufe0f</button>
   </div>
   <div class="ds">
-    <div class="dt"><div class="dv" style="color:var(--ac)">${s}</div><div class="dl">Streak</div></div>
+    <div class="dt"><div class="dv" style="color:var(--ac)">${s}${sUnit}</div><div class="dl">Streak</div></div>
     <div class="dt"><div class="dv" style="color:var(--gr)">${td2}</div><div class="dl">Total</div></div>
     <div class="dt"><div class="dv" style="color:var(--am)">${rate}%</div><div class="dl">Rate</div></div>
-    <div class="dt"><div class="dv" style="color:var(--bl)">${bs}</div><div class="dl">Best</div></div>
+    <div class="dt"><div class="dv" style="color:var(--bl)">${bs}${sUnit}</div><div class="dl">Best</div></div>
   </div>
   ${calHTML(h,detM)}
-  <div style="font-size:11px;color:var(--txm);text-align:center;margin-top:4px">Tap a past day to mark/unmark it</div>
-  <button class="db" style="margin-top:16px;background:rgba(251,191,36,.08);color:var(--am);border-color:rgba(251,191,36,.2)" onclick="archiveHabit(${detI})">${h.archived?'\u267b\ufe0f Unarchive Habit':'\ud83d\udce6 Archive Habit'}</button>
+  <button class="ab" onclick="archiveHabit(${detI})">${h.archived?'\u267b\ufe0f Unarchive Habit':'\ud83d\udce6 Archive Habit'}</button>
   </div></div>`;
 }
 
@@ -376,26 +446,28 @@ function settingsSheet(){
   return`<div class="so ac" id="sov" onclick="cls(event)"><div class="ss"><div class="shn"></div><h2>Settings</h2>
   <div class="si"><div><div class="sil">Export Data</div><div class="sid">Download habits as JSON backup</div></div><button class="sib" onclick="expD()">Export</button></div>
   <div class="si"><div><div class="sil">Import Data</div><div class="sid">Restore from a backup file</div></div><button class="sib" onclick="document.getElementById('imp').click()">Import</button><input type="file" id="imp" accept=".json" style="display:none" onchange="impD(event)"></div>
+  <div class="si"><div><div class="sil">Merge Import</div><div class="sid">Add habits from file without replacing</div></div><button class="sib" onclick="document.getElementById('imp2').click()">Merge</button><input type="file" id="imp2" accept=".json" style="display:none" onchange="mergeD(event)"></div>
   <div class="si"><div><div class="sil">Reset All</div><div class="sid">Delete all habits permanently</div></div><button class="sib" style="color:var(--rd);border-color:rgba(248,113,113,.3)" onclick="resetAll()">Reset</button></div>
-  <div style="text-align:center;margin-top:24px;color:var(--txm);font-size:12px;font-weight:600">Streak v5 \u00b7 Built for Telegram</div>
+  <div style="text-align:center;margin-top:24px;color:var(--txm);font-size:12px;font-weight:600">Streak v6 \u00b7 Built for Telegram</div>
   </div></div>`;
 }
 
 // ===== INTERACTIONS =====
 function tog(i){
-  const t2=td();if(!H[i].completions)H[i].completions={};
+  const t2=td();if(!H[i]||H[i].archived)return;
+  if(!H[i].completions)H[i].completions={};
   const cur=H[i].completions[t2];
   if(cur==='done'){delete H[i].completions[t2]}
   else{
     H[i].completions[t2]='done';
     const s=streak(H[i]);
-    if(s===7)toast('\ud83d\udd25 One week streak!');
+    if(s===7&&H[i].frequency!=='3x/week')toast('\ud83d\udd25 One week streak!');
     else if(s===30)toast('\ud83c\udfc6 30-day streak!');
     else if(s===100)toast('\ud83d\udcaf 100 days!');
     // Perfect day check
     const active=H.filter(h=>!h.archived);
-    const due=active.filter(h=>isDue(h,t2));
-    if(due.length>=1&&due.every(h=>isEffectivelyDone(h,t2)))setTimeout(()=>{celeb();toast('\u2728 Perfect day!')},350);
+    const due2=active.filter(h=>isDue(h,t2));
+    if(due2.length>=1&&due2.every(h=>isEffDone(h,t2)))setTimeout(()=>{celeb();toast('\u2728 Perfect day!')},350);
   }
   save(H);
   if(window.Telegram?.WebApp?.HapticFeedback)window.Telegram.WebApp.HapticFeedback.impactOccurred(cur==='done'?'light':'medium');
@@ -403,7 +475,8 @@ function tog(i){
 }
 
 function skip(i){
-  const t2=td();if(!H[i].completions)H[i].completions={};
+  const t2=td();if(!H[i])return;
+  if(!H[i].completions)H[i].completions={};
   const cur=H[i].completions[t2];
   if(cur==='skip')delete H[i].completions[t2];
   else H[i].completions[t2]='skip';
@@ -413,13 +486,17 @@ function skip(i){
 }
 
 function rem(i){
+  if(!H[i])return;
   const h=H[i],row=document.getElementById(`h-${i}`);
   if(window.Telegram?.WebApp?.HapticFeedback)window.Telegram.WebApp.HapticFeedback.notificationOccurred('warning');
-  const go=()=>{H.splice(i,1);save(H);render();showUndo(`"${h.name}" deleted`,{habit:{...h,completions:{...h.completions}}})};
+  // Deep copy for undo
+  const copy=JSON.parse(JSON.stringify(h));
+  const go=()=>{H.splice(i,1);save(H);render();showUndo(`"${copy.name}" deleted`,{habit:copy})};
   if(row){row.classList.add('rm');setTimeout(go,400)}else go();
 }
 
 function archiveHabit(i){
+  if(!H[i])return;
   H[i].archived=!H[i].archived;
   save(H);sheet=null;
   toast(H[i].archived?'\ud83d\udce6 Archived':'\u267b\ufe0f Restored to active');
@@ -427,8 +504,8 @@ function archiveHabit(i){
 }
 
 function openAdd(){sheet='add';editI=null;sN='';sT='';sE=EM[0];sC='#F46B3F';sF='Daily';render();setTimeout(()=>document.getElementById('inp')?.focus(),450)}
-function openEdit(i){const h=H[i];sheet='edit';editI=i;sN=h.name;sT=h.target||'';sE=h.emoji;sC=h.color;sF=h.frequency||'Daily';render();setTimeout(()=>document.getElementById('inp')?.focus(),450)}
-function openDet(i){sheet='detail';detI=i;detM=new Date();render()}
+function openEdit(i){const h=H[i];if(!h)return;sheet='edit';editI=i;sN=h.name;sT=h.target||'';sE=h.emoji;sC=h.color;sF=h.frequency||'Daily';render();setTimeout(()=>document.getElementById('inp')?.focus(),450)}
+function openDet(i){if(!H[i])return;sheet='detail';detI=i;detM=new Date();render()}
 function openSet(){sheet='settings';render()}
 function cls(e){if(e.target.id==='sov'){sheet=null;render()}}
 function clsD(){sheet=null;render()}
@@ -449,21 +526,63 @@ function sub(){
 }
 
 function expD(){const b=new Blob([JSON.stringify(H,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=`streak-${td()}.json`;a.click();toast('\ud83d\udce6 Exported!')}
-function impD(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{const d=JSON.parse(ev.target.result);if(Array.isArray(d)){d.forEach(h=>{if(Array.isArray(h.completions)){const o={};h.completions.forEach(d2=>o[d2]='done');h.completions=o}if(!h.completions)h.completions={};if(!h.frequency)h.frequency='Daily'});H=d;save(H);render();toast('\u2705 Imported '+d.length+' habits!')}else toast('\u274c Invalid format')}catch{toast('\u274c Parse error')}};r.readAsText(f)}
+
+function parseImport(raw){
+  const d=JSON.parse(raw);
+  if(!Array.isArray(d))throw new Error('Not array');
+  d.forEach(h=>{
+    if(Array.isArray(h.completions)){const o={};h.completions.forEach(d2=>o[d2]='done');h.completions=o}
+    if(!h.completions)h.completions={};
+    if(!h.frequency)h.frequency='Daily';
+  });
+  return d;
+}
+
+function impD(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{const d=parseImport(ev.target.result);H=d;save(H);render();toast('\u2705 Imported '+d.length+' habits!')}catch{toast('\u274c Invalid file')}};r.readAsText(f);e.target.value=''}
+
+function mergeD(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{const d=parseImport(ev.target.result);const ids=new Set(H.map(h=>h.id));let added=0;d.forEach(h=>{if(!ids.has(h.id)){H.push(h);added++}});save(H);render();toast(`\u2705 Merged ${added} new habits`)}catch{toast('\u274c Invalid file')}};r.readAsText(f);e.target.value=''}
+
 function resetAll(){if(confirm('Delete ALL habits and data? This cannot be undone.')){H=[];save(H);render();toast('\ud83d\uddd1 All data cleared')}}
 
 // ===== SWIPE =====
-let tsx=0;
-document.addEventListener('touchstart',e=>{const r=e.target.closest('.hi');if(r)tsx=e.touches[0].clientX;document.querySelectorAll('.hi.sw').forEach(r2=>{if(r2!==r)r2.classList.remove('sw')})},{passive:true});
-document.addEventListener('touchmove',e=>{const r=e.target.closest('.hi');if(!r)return;const dx=e.touches[0].clientX-tsx;if(dx<-50)r.classList.add('sw');else if(dx>30)r.classList.remove('sw')},{passive:true});
+let tsx=0,tsy=0,swiping=false;
+document.addEventListener('touchstart',e=>{
+  const r=e.target.closest('.hi');
+  if(r){tsx=e.touches[0].clientX;tsy=e.touches[0].clientY;swiping=false}
+  document.querySelectorAll('.hi.sw').forEach(r2=>{if(r2!==r)r2.classList.remove('sw')});
+},{passive:true});
+document.addEventListener('touchmove',e=>{
+  const r=e.target.closest('.hi');if(!r)return;
+  const dx=e.touches[0].clientX-tsx,dy=e.touches[0].clientY-tsy;
+  // Only swipe if horizontal movement dominates (prevents conflict with scrolling)
+  if(!swiping&&Math.abs(dx)>10){swiping=Math.abs(dx)>Math.abs(dy)*1.5}
+  if(!swiping)return;
+  if(dx<-50)r.classList.add('sw');else if(dx>30)r.classList.remove('sw');
+},{passive:true});
 document.addEventListener('touchstart',e=>{if(!e.target.closest('.hi')&&!e.target.closest('.hdz'))document.querySelectorAll('.hi.sw').forEach(r=>r.classList.remove('sw'))},{passive:true});
+
+// ===== LONG PRESS to open detail =====
+document.addEventListener('pointerdown',e=>{
+  const r=e.target.closest('.hi');
+  if(!r||e.target.closest('.ib')||e.target.closest('.cb')||e.target.closest('.hdz'))return;
+  lpTimer=setTimeout(()=>{
+    const id=r.id?.replace('h-','');
+    if(id!==undefined&&H[+id]){
+      if(window.Telegram?.WebApp?.HapticFeedback)window.Telegram.WebApp.HapticFeedback.impactOccurred('heavy');
+      openDet(+id);
+    }
+    lpTimer=null;
+  },500);
+});
+document.addEventListener('pointerup',()=>{clearTimeout(lpTimer);lpTimer=null});
+document.addEventListener('pointermove',e=>{if(lpTimer&&(Math.abs(e.movementX)>5||Math.abs(e.movementY)>5)){clearTimeout(lpTimer);lpTimer=null}});
 
 // ===== MIGRATE =====
 (function migrate(){
-  // Migrate from v4
-  const v4=localStorage.getItem('streak_v4');
-  if(v4&&!localStorage.getItem(SK)){try{localStorage.setItem(SK,v4);H=load()}catch{}}
-  // Fix data
+  ['streak_v4','streak_v5'].forEach(k=>{
+    const old=localStorage.getItem(k);
+    if(old&&!localStorage.getItem(SK)){try{localStorage.setItem(SK,old);H=load()}catch{}}
+  });
   H.forEach(h=>{
     if(Array.isArray(h.completions)){const o={};h.completions.forEach(d=>o[d]='done');h.completions=o}
     if(!h.completions)h.completions={};
